@@ -5,7 +5,9 @@ const routes=require('./routes/main.js')
 
 const app=express();
 
-
+//to use static folder in project
+//static/css/style.css
+app.use('/static',express.static("public"))
 app.use('',routes);
 
 //template engine => hbs
