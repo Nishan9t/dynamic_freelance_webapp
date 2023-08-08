@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 require('dotenv').config();
 const routes=require('./routes/main.js')
+const mongoose = require('mongoose')
 
 const app=express();
 
@@ -14,6 +15,10 @@ app.use('',routes);
 app.set("view engine","hbs");
 //second views is name of folder
 app.set("views","views");
+
+
+//db connection
+mongoose.connect("mongodb://localhost:27017/dynamic_webapp")
 
 
 
