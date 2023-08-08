@@ -15,6 +15,8 @@ app.use('',routes);
 app.set("view engine","hbs");
 //second views is name of folder
 app.set("views","views");
+//setting partials
+hbs.registerPartials("views/partials/");
 
 
 //db connection
