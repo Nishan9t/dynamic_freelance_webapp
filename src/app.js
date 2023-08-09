@@ -3,7 +3,9 @@ const hbs = require('hbs');
 require('dotenv').config();
 const routes=require('./routes/main.js')
 const mongoose = require('mongoose');
-const Detail=require("./models/Detail.js")
+const Detail=require("./models/Detail.js");
+const Slider = require("./models/Slider.js");
+
 
 const app=express();
 
@@ -23,6 +25,26 @@ hbs.registerPartials("views/partials/");
 //db connection
 mongoose.connect("mongodb://localhost:27017/dynamic_webapp").then(()=>{
     console.log("db connected");
+
+    // Slider.create([
+    //     {
+    //         title:"Learn Java in very easy manner",
+    //         subTitle:'Java is one of the most popular programming language',
+    //         imageUrl:"/static/images/s1.jpg"
+    //     },
+    //     {
+    //         title:'Learn Node in very easy manner',
+    //         subTitle:'Node is one of the most popular Backend Programming language',
+    //         imageUrl:"/static/images/s2.jpg"
+    //     },
+    //     {
+    //         title:'Learn React in very easy manner',
+    //         subTitle:'React is one of the most popular Frontend programming language',
+    //         imageUrl:"/static/images/s3.png"
+    //     }
+    // ])
+
+
     // Detail.create({
     //     brandName:"Info Tech Solution",
     //     brandIconUrl:"static/images/rocket.png",
