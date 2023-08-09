@@ -2,7 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 require('dotenv').config();
 const routes=require('./routes/main.js')
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const Detail=require("./models/Detail.js")
 
 const app=express();
 
@@ -20,7 +21,39 @@ hbs.registerPartials("views/partials/");
 
 
 //db connection
-mongoose.connect("mongodb://localhost:27017/dynamic_webapp")
+mongoose.connect("mongodb://localhost:27017/dynamic_webapp").then(()=>{
+    console.log("db connected");
+    // Detail.create({
+    //     brandName:"Info Tech Solution",
+    //     brandIconUrl:"static/images/rocket.png",
+    //     links:[
+    //         {
+    //             label:"Home",
+    //             url:"/"
+    //         },
+    //         {
+    //             label:"Services",
+    //             url:"/services"
+    //         },
+    //         {
+    //             label:"Gallery",
+    //             url:"/gallery"
+    //         },
+    //         {
+    //             label:"About",
+    //             url:"/about"
+    //         },
+    //         {
+    //             label:"Contact Us",
+    //             url:"/contact-us"
+    //         },
+
+    //     ]
+    // })
+    
+
+})
+
 
 
 
