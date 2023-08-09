@@ -1,13 +1,29 @@
 const express =require('express');
 
+//fetching navbar data
+
+const Detail=require('../models/Detail.js');
+
+
 const routes=express.Router()
 
-routes.get("/",(req,res)=>{
-    res.render("index");
+routes.get("/",async (req,res)=>{
+
+    const details =await Detail.findOne({"_id":"64d32b3a10353258aa104c82"});
+   // console.log(details)
+
+    res.render("index",{
+        details:details
+    });
 })
 
-routes.get("/gallery",(req,res)=>{
-    res.render("gallery");
+routes.get("/gallery",async (req,res)=>{
+    const details =await Detail.findOne({"_id":"64d32b3a10353258aa104c82"});
+   // console.log(details)
+
+    res.render("gallery",{
+        details:details
+    });
 })
 
 

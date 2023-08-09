@@ -2,7 +2,7 @@
 const mongoose=require('mongoose');
 
 const Detail= mongoose.Schema({
-    brandname:String,
+    brandName:String,
     brandIconUrl:String,
     links:[
         {
