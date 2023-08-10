@@ -4,6 +4,7 @@ const express =require('express');
 
 const Detail=require('../models/Detail.js');
 const Slider = require('../models/Slider.js');
+const Service = require('../models/Service.js');
 
 
 const routes=express.Router()
@@ -16,9 +17,13 @@ routes.get("/",async (req,res)=>{
    const slides= await Slider.find();
   // console.log(slides);
 
+    const services =await Service.find();
+    
+
     res.render("index",{
         details:details,
-        slides:slides
+        slides:slides,
+        services:services
     });
 })
 

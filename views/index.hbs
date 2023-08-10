@@ -20,24 +20,30 @@
     {{> slider slides=slides}}
 
     {{!-- services section --}}
+    
     <section id="service_section" class="py-4">
      <div class="container">
        <h1 class="text-center text-secondary">Services that we provide</h1>
         <div class="row mt-5">
+
+          {{#each services}}
+
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
                 <div class="container text-center p-3">
-                  <i class="fa-brands fa-accusoft service_icon"></i>
+                  <i class="{{this.icon}} service_icon"></i>
                   </div>
-                <h5 class="card-title">Provide Best Courses</h5>
-                <p>We provide best courses which help our student in learning and placement.</p>
-                <a href="#">Check</a>
+                <h5 class="card-title">{{this.title}}</h5>
+                <p>{{this.description}}</p>
+                <a href="{{this.link}}">{{this.linkText}}</a>
                 <a href="#" class="ml-3">Support</a>
               </div>
               
             </div>
           </div>
+
+          {{/each}}
 
       </div>
      </div>

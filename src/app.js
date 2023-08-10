@@ -29,21 +29,21 @@ mongoose.connect("mongodb://localhost:27017/dynamic_webapp").then(()=>{
 
     // Service.create([
     //     {
-    //         icon:'fab-fa-accusoft',
+    //         icon:'fa-brands fa-accusoft',
     //         title:'Provide Best Courses',
     //         description:"We provide best courses which help our student in learning and placement.",
     //         linkText:"https://www.learncodewithdurgesh.com",
     //         link:'Check'
     //     },
     //     {
-    //         icon:'fab-fa-affiliatetheme',
+    //         icon:'fa-brands fa-affiliatetheme',
     //         title:'Learn Projects',
     //         description:"We provide best courses which help our student in learning and placement.",
     //         linkText:"https://www.learncodewithdurgesh.com",
     //         link:'Learn'
     //     },
     //     {
-    //         icon:'fab-fa-accusoft',
+    //         icon:'fa-brands fa-accusoft',
     //         title:'Provide Best Courses',
     //         description:"We provide best courses which help our student in learning and placement.",
     //         linkText:"https://www.learncodewithdurgesh.com",
