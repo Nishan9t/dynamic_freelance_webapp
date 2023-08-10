@@ -6,14 +6,19 @@ const mongoose = require('mongoose');
 const Detail=require("./models/Detail.js");
 const Slider = require("./models/Slider.js");
 const Service = require('./models/Service.js');
+const bodyParser =require('body-parser');
 
 
 const app=express();
-
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
 //to use static folder in project
 //static/css/style.css
 app.use('/static',express.static("public"))
 app.use('',routes);
+
+
 
 //template engine => hbs
 app.set("view engine","hbs");

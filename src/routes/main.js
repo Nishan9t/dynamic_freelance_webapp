@@ -5,6 +5,7 @@ const express =require('express');
 const Detail=require('../models/Detail.js');
 const Slider = require('../models/Slider.js');
 const Service = require('../models/Service.js');
+const Contact = require('../models/Contact.js');
 
 
 const routes=express.Router()
@@ -36,6 +37,24 @@ routes.get("/gallery",async (req,res)=>{
     res.render("gallery",{
         details:details
     });
+})
+
+
+routes.post("/process-contact-form",async(req,res)=>{
+    // console.log("this form is submitted");
+    // console.log(req.body);
+
+    //save the data to db
+    try{
+        const data=await Contact.create(req.body)
+        console.log(data);
+        res.redirect("/")
+    }
+    catch(e){
+        console.log(e);
+        res.redirect("/")
+    }
+
 })
 
 

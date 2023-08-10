@@ -56,20 +56,22 @@
         <h3 class="text-center text-secondary">Contact us</h3>
         <div class="row">
           <div class="col-md-12">
-            <form>
+
+
+            <form action="/process-contact-form" method="POST">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Your email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
 
               <div class="mb-3">
                 <label for="contactNumberField" class="form-label ">Your contact number</label>
-                <input type="number" class="form-control" id="exampleInputPassword1">
+                <input name="phone" type="number" class="form-control" id="exampleInputPassword1">
               </div>
 
               <div class="form-floating  my-2">
-                <textarea class="form-control" placeholder="Enter your query here" id="queryField" style="height: 250px"></textarea>
+                <textarea name="query" class="form-control" placeholder="Enter your query here" id="queryField" style="height: 250px"></textarea>
                 <label for="queryField">Your query</label>
               </div>
               
