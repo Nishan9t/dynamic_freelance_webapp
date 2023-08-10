@@ -7,6 +7,9 @@ const Detail=require("./models/Detail.js");
 const Slider = require("./models/Slider.js");
 const Service = require('./models/Service.js');
 const bodyParser =require('body-parser');
+const Banner1 = require('./models/Banner1.js');
+const About = require('./models/About.js');
+const Gallery = require('./models/Gallery.js');
 
 
 const app=express();
@@ -31,6 +34,41 @@ hbs.registerPartials("views/partials/");
 //db connection
 mongoose.connect("mongodb://localhost:27017/dynamic_webapp").then(()=>{
     console.log("db connected");
+
+
+    // Gallery.create([
+    //     {
+    //         img:'/static/images/pic.jpg',
+    //     },
+    //     {
+    //         img:'/static/images/pic.jpg',
+    //     },
+    //     {
+    //         img:'/static/images/pic.jpg',
+    //     },
+    //     {
+    //         img:'/static/images/pic.jpg',
+    //     }
+    // ])
+
+    // About.create({
+    //     heading:'About this side',
+    //     description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda maxime quibusdam libero adipisci quo quas numquam in ipsum obcaecati illo, laudantium minus ducimus ea veniam ut. Facere veniam quibusdam exercitationem.'
+    // })
+
+    // Banner1.create([
+    //     {
+    //         img:'/static/images/banner1.jpg',
+    //         heading:'We work for people, not for money',
+    //         text:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab tenetur harum iusto vitae cupiditate, dolorem ducimus deserunt odio officia excepturi reprehenderit veniam autem aperiam nostrum iste iure accusantium laboriosam adipisci'
+    //     },
+    //     {
+    //         img:'/static/images/banner2.jpg',
+    //         heading:'We work for people, not for money',
+    //         text:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab tenetur harum iusto vitae cupiditate, dolorem ducimus deserunt odio officia excepturi reprehenderit veniam autem aperiam nostrum iste iure accusantium laboriosam adipisci'
+    //     }
+
+    // ])
 
     // Service.create([
     //     {
