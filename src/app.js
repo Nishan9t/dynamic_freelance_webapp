@@ -5,6 +5,7 @@ const routes=require('./routes/main.js')
 const mongoose = require('mongoose');
 const Detail=require("./models/Detail.js");
 const Slider = require("./models/Slider.js");
+const Service = require('./models/Service.js');
 
 
 const app=express();
@@ -25,6 +26,30 @@ hbs.registerPartials("views/partials/");
 //db connection
 mongoose.connect("mongodb://localhost:27017/dynamic_webapp").then(()=>{
     console.log("db connected");
+
+    // Service.create([
+    //     {
+    //         icon:'fab-fa-accusoft',
+    //         title:'Provide Best Courses',
+    //         description:"We provide best courses which help our student in learning and placement.",
+    //         linkText:"https://www.learncodewithdurgesh.com",
+    //         link:'Check'
+    //     },
+    //     {
+    //         icon:'fab-fa-affiliatetheme',
+    //         title:'Learn Projects',
+    //         description:"We provide best courses which help our student in learning and placement.",
+    //         linkText:"https://www.learncodewithdurgesh.com",
+    //         link:'Learn'
+    //     },
+    //     {
+    //         icon:'fab-fa-accusoft',
+    //         title:'Provide Best Courses',
+    //         description:"We provide best courses which help our student in learning and placement.",
+    //         linkText:"https://www.learncodewithdurgesh.com",
+    //         link:'Check'
+    //     }
+    // ])
 
     // Slider.create([
     //     {
